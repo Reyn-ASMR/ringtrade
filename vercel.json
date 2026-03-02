@@ -15,3 +15,24 @@
 }
 ```
 
+5. Click **Commit changes**
+6. Vercel auto-deploys in 30 seconds
+
+---
+
+**Also check one thing in Vercel:**
+
+1. Go to **vercel.com** → your project
+2. Click **Settings → General**
+3. Look for **"Root Directory"**
+4. Make sure it's blank or set to `./` — not pointing to a subfolder
+
+---
+
+**After adding `vercel.json`:**
+```
+ringtrade.co.uk              ✓ homepage
+ringtrade.co.uk/pricing      ✓ works
+ringtrade.co.uk/about        ✓ works
+Reload on any page           ✓ no more 404
+
