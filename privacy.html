@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — Ringtrade</title>
+  <meta name="description" content="How Ringtrade collects, uses, and protects your data."/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231B3A6B'/><text y='24' x='4' font-size='18' font-weight='800' font-family='Arial' fill='%23E87722'>RT</text></svg>"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#1B3A6B;--orange:#E87722;--orange2:#c9661a;--white:#FFFFFF;--lgrey:#F5F7FA;--mgrey:#6B7E8F;--dgrey:#333333;--border:#E2E8F0;--lorange:#FEF3E8}
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",sans-serif;color:var(--dgrey);background:var(--white);line-height:1.7;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}ul{list-style:none}
+    h1,h2,h3,h4{font-family:"Poppins",sans-serif;font-weight:800;line-height:1.15;color:var(--navy);letter-spacing:-0.02em}
+    h1{font-size:clamp(2.2rem,5vw,3.8rem)}h2{font-size:clamp(1.7rem,3.5vw,2.6rem)}h3{font-size:clamp(1.2rem,2vw,1.5rem)}
+    p{font-size:1rem;color:var(--mgrey);line-height:1.75}
+    .section{padding:5rem 5%}.section-grey{background:var(--lgrey)}.section-navy{background:var(--navy)}
+    .container{max-width:1180px;margin:0 auto}
+    .section-head{margin-bottom:3.5rem}.section-head h2{margin-bottom:0.75rem}
+    .section-head.center{text-align:center}.section-head.center p{margin:0 auto}
+    .section-label{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--orange);margin-bottom:0.75rem}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-delay-1{transition-delay:0.1s}.reveal-delay-2{transition-delay:0.2s}
+    .btn-primary{background:var(--orange);color:#fff;font-family:"Poppins",sans-serif;font-weight:700;font-size:0.88rem;padding:0.65rem 1.5rem;border-radius:6px;border:none;cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:0.4rem;text-decoration:none;white-space:nowrap;min-height:48px}
+    .btn-primary:hover{background:var(--orange2);transform:translateY(-1px)}
+    .btn-secondary{background:transparent;color:var(--navy);font-family:"Poppins",sans-serif;font-weight:700;font-size:0.88rem;padding:0.65rem 1.5rem;border-radius:6px;border:2px solid var(--navy);cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:0.4rem;text-decoration:none;white-space:nowrap;min-height:48px}
+    .btn-secondary:hover{background:var(--navy);color:#fff}
+    .btn-outline-orange{background:transparent;color:var(--orange);font-family:"Poppins",sans-serif;font-weight:700;padding:0.65rem 1.5rem;border-radius:6px;border:2px solid var(--orange);cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:0.4rem;text-decoration:none;white-space:nowrap;min-height:48px}
+    .btn-outline-orange:hover{background:var(--orange);color:#fff}
+    .btn-white{background:#fff;color:var(--navy);font-family:"Poppins",sans-serif;font-weight:700;padding:0.65rem 1.5rem;border-radius:6px;border:2px solid #fff;cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:0.4rem;text-decoration:none;white-space:nowrap;min-height:48px}
+    .btn-white:hover{background:var(--lorange);border-color:var(--lorange)}
+    .nav{position:sticky;top:0;z-index:500;background:var(--white);box-shadow:0 2px 12px rgba(27,58,107,0.08);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:72px}
+    .nav-links{display:flex;align-items:center;gap:2rem}
+    .nav-links a{font-weight:500;font-size:0.9rem;color:var(--dgrey);transition:color 0.2s}
+    .nav-links a:hover{color:var(--navy)}
+    .nav-right{display:flex;align-items:center;gap:1.2rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--navy);transition:all 0.3s;border-radius:2px}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:var(--white);z-index:499;padding:2rem 5%;flex-direction:column;gap:1.5rem;overflow-y:auto}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-size:1.2rem;font-weight:600;color:var(--navy);padding:0.75rem 0;border-bottom:1px solid var(--border)}
+    .mobile-menu .btn-primary{width:100%;justify-content:center;margin-top:1rem;padding:1rem}
+    .mobile-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:400;background:var(--navy);padding:0.75rem 1.2rem}
+    .mobile-cta-bar .btn-primary{width:100%;justify-content:center;font-size:1rem;padding:0.9rem}
+    .cta-banner{background:var(--navy);padding:5rem 5%;text-align:center}
+    .cta-banner h2{color:#fff;margin-bottom:1rem}
+    .cta-banner p{color:rgba(255,255,255,0.8);max-width:520px;margin:0 auto 2rem}
+    .cta-banner small{display:block;color:rgba(255,255,255,0.45);margin-top:1rem;font-size:0.82rem}
+    footer{background:var(--navy);padding:4rem 5% 0}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.1)}
+    .footer-col h4{color:#fff;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.2rem}
+    .footer-col ul{display:flex;flex-direction:column;gap:0.6rem}
+    .footer-col ul a{color:rgba(255,255,255,0.65);font-size:0.88rem;transition:color 0.2s}
+    .footer-col ul a:hover{color:var(--orange)}
+    .footer-tagline{color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:0.75rem}
+    .footer-contact-item{color:rgba(255,255,255,0.65);font-size:0.88rem;margin-bottom:0.5rem}
+    .footer-contact-item a{color:var(--orange)}
+    .footer-badges{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+    .footer-badge{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);font-size:0.72rem;padding:0.3rem 0.7rem;border-radius:4px;border:1px solid rgba(255,255,255,0.12)}
+    .footer-bottom{padding:1.2rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;font-size:0.78rem;color:rgba(255,255,255,0.4)}
+    .footer-bottom a{color:rgba(255,255,255,0.5)}
+    .footer-bottom a:hover{color:var(--orange)}
+    .footer-disclaimer{font-size:0.72rem;color:rgba(255,255,255,0.3);padding-bottom:1rem}
+    .accordion-item{border-bottom:1px solid var(--border)}
+    .accordion-btn{width:100%;background:none;border:none;cursor:pointer;padding:1.2rem 0;display:flex;align-items:center;justify-content:space-between;text-align:left;font-family:"DM Sans",sans-serif;font-weight:600;font-size:1rem;color:var(--navy);transition:color 0.2s}
+    .accordion-btn:hover{color:var(--orange)}
+    .accordion-arrow{width:24px;height:24px;background:var(--lgrey);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s,transform 0.3s;font-size:0.75rem;color:var(--navy)}
+    .accordion-btn.open .accordion-arrow{transform:rotate(180deg);background:var(--orange);color:#fff}
+    .accordion-body{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s ease}
+    .accordion-body.open{max-height:400px;padding-bottom:1.2rem}
+    .accordion-body p{color:var(--mgrey);font-size:0.95rem}
+    .legal-page{max-width:800px;margin:0 auto;padding:4rem 5%}
+    .legal-toc{background:var(--lgrey);border-radius:10px;padding:1.5rem 2rem;margin-bottom:3rem}
+    .legal-toc h4{color:var(--navy);margin-bottom:1rem;font-size:0.9rem;letter-spacing:0.05em;text-transform:uppercase}
+    .legal-toc ul{display:flex;flex-direction:column;gap:0.4rem}
+    .legal-toc ul a{color:var(--navy);font-size:0.9rem;text-decoration:underline}
+    .legal-section{margin-bottom:3rem}
+    .legal-section h2{font-size:1.4rem;margin-bottom:1rem;padding-top:1rem;border-top:2px solid var(--border)}
+    .legal-section p{margin-bottom:1rem;color:var(--dgrey)}
+    .legal-section ul{margin:0.75rem 0 1rem 1.5rem;list-style:disc;display:flex;flex-direction:column;gap:0.4rem}
+    .legal-section ul li{color:var(--dgrey);font-size:0.95rem}
+    @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.mobile-cta-bar{display:block}.footer-grid{grid-template-columns:1fr;gap:2rem}.section{padding:3.5rem 5%}body{padding-bottom:72px}}
+  </style>
+  
+</head>
+<body>
+<nav class="nav">
+  <a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 80" style="height:44px;width:auto;">
+  <defs><linearGradient id="ig" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E87722"/><stop offset="100%" style="stop-color:#FF9A3C"/></linearGradient></defs>
+  <path d="M28 8 L8 16 L8 38 C8 52 18 63 28 68 C38 63 48 52 48 38 L48 16 Z" fill="#1B3A6B"/>
+  <path d="M20 36 Q28 28 36 36" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M16 42 Q28 30 40 42" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="28" cy="44" r="3.5" fill="url(#ig)"/>
+  <text x="62" y="54" font-family="Montserrat,Arial Black,sans-serif" font-weight="800" font-size="36" fill="#1B3A6B">RING</text>
+  <text x="152" y="54" font-family="Montserrat,Arial Black,sans-serif" font-weight="800" font-size="36" fill="#E87722">T</text>
+  <text x="173" y="54" font-family="Montserrat,Arial Black,sans-serif" font-weight="800" font-size="36" fill="#1B3A6B">RADE</text>
+  <text x="62" y="70" font-family="Arial,sans-serif" font-size="10" letter-spacing="2.5" fill="#6B7E8F">NEVER MISS A JOB AGAIN</text>
+</svg></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/#how-it-works">How It Works</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <a href="/login" style="font-weight:500;font-size:0.85rem;color:var(--mgrey);">Client Login</a>
+    <a href="/book-demo" class="btn-primary">Book a Free Demo</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/#how-it-works">How It Works</a>
+  <a href="/pricing">Pricing</a>
+  <a href="/about">About</a>
+  <a href="/contact">Contact</a>
+  <a href="/login">Client Login</a>
+  <a href="/book-demo" class="btn-primary">Book a Free Demo →</a>
+</div>
+
+<div style="background:var(--navy);padding:4rem 5% 3rem;">
+  <div class="container" style="max-width:800px;"><h1 style="color:#fff;">Privacy Policy</h1><p style="color:rgba(255,255,255,0.7);">How Ringtrade collects, uses, and protects your data.</p></div>
+</div>
+<div class="legal-page">
+  <p style="color:var(--mgrey);font-size:0.85rem;margin-bottom:2rem;">Last updated: January 2026</p>
+  <div class="legal-toc"><h4>Contents</h4><ul><li><a href="#who-we-are">1. Who we are</a></li><li><a href="#data-we-collect">2. What data we collect</a></li><li><a href="#why-we-collect">3. Why we collect it</a></li><li><a href="#legal-basis">4. Legal basis for processing</a></li><li><a href="#third-parties">5. Who we share data with</a></li><li><a href="#retention">6. How long we keep your data</a></li><li><a href="#your-rights">7. Your rights</a></li><li><a href="#cookies">8. Cookies</a></li><li><a href="#complaints">9. How to complain</a></li></ul></div>
+  <div class="legal-section" id="who-we-are"><h2>Who we are</h2><p>Ringtrade ("Ringtrade", "we", "us") provides AI receptionist and Google review automation services to UK tradespeople. We are registered with the Information Commissioner's Office (ICO). ICO Registration Number: <strong>[ADD YOUR ICO NUMBER]</strong>.</p><p>Contact: <a href="mailto:hello@ringtrade.co.uk" style="color:var(--orange);">hello@ringtrade.co.uk</a></p></div><div class="legal-section" id="data-we-collect"><h2>What data we collect</h2><ul><li>Name, email, phone number (from contact forms and demo bookings)</li><li>Company name and address (from client onboarding)</li><li>Call recordings — calls handled by our AI on behalf of clients</li><li>Caller details — names, numbers, and booking information of your customers</li><li>Payment information — processed by Stripe; we do not store card details</li></ul></div><div class="legal-section" id="why-we-collect"><h2>Why we collect it</h2><ul><li>To provide the AI receptionist and review automation services</li><li>To process subscription payments via Stripe</li><li>To respond to enquiries and provide support</li><li>To send service communications (setup confirmations, invoices)</li><li>To comply with legal obligations</li></ul></div><div class="legal-section" id="legal-basis"><h2>Legal basis for processing</h2><p>We process data under UK GDPR: contract performance (Article 6(1)(b)), legitimate interests (Article 6(1)(f)), legal obligation (Article 6(1)(c)), and consent (Article 6(1)(a)) for marketing.</p></div><div class="legal-section" id="third-parties"><h2>Who we share data with</h2><ul><li><strong>GoHighLevel (USA)</strong> — CRM and automation platform</li><li><strong>Voice AI Provider</strong> — Powers our AI call answering</li><li><strong>Stripe (USA)</strong> — Secure payment processing</li><li><strong>Google Workspace (USA)</strong> — Business email</li></ul><p>We do not sell your personal data.</p></div><div class="legal-section" id="retention"><h2>How long we keep your data</h2><ul><li>Active clients: duration of subscription plus 90 days</li><li>Cancelled clients: deleted within 6 months of cancellation</li><li>Enquiries: retained for 12 months</li><li>Financial records: 7 years (HMRC requirement)</li></ul></div><div class="legal-section" id="your-rights"><h2>Your rights</h2><p>Under UK GDPR you have the right to access, rectify, erase, object, portability, and restrict processing of your data. Email <a href="mailto:hello@ringtrade.co.uk" style="color:var(--orange);">hello@ringtrade.co.uk</a> to exercise any right. We respond within 30 days.</p></div><div class="legal-section" id="cookies"><h2>Cookies</h2><ul><li>Essential cookies: required for the website to function</li><li>Analytics cookies: Google Analytics (anonymised)</li><li>Preference cookies: remember your cookie consent</li></ul></div><div class="legal-section" id="complaints"><h2>How to complain</h2><p>Contact us first at <a href="mailto:hello@ringtrade.co.uk" style="color:var(--orange);">hello@ringtrade.co.uk</a>. You also have the right to complain to the ICO at <a href="https://ico.org.uk" target="_blank" style="color:var(--orange);">ico.org.uk</a> or 0303 123 1113.</p></div>
+</div>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 80" style="height:40px;width:auto;margin-bottom:0.75rem;">
+  <defs><linearGradient id="ig2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E87722"/><stop offset="100%" style="stop-color:#FF9A3C"/></linearGradient></defs>
+  <path d="M28 8 L8 16 L8 38 C8 52 18 63 28 68 C38 63 48 52 48 38 L48 16 Z" fill="white" opacity="0.9"/>
+  <path d="M20 36 Q28 28 36 36" fill="none" stroke="#1B3A6B" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M16 42 Q28 30 40 42" fill="none" stroke="#1B3A6B" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="28" cy="44" r="3.5" fill="url(#ig2)"/>
+  <text x="62" y="54" font-family="Montserrat,Arial Black,sans-serif" font-weight="800" font-size="36" fill="white">RING</text>
+  <text x="152" y="54" font-family="Montserrat,Arial Black,sans-serif" font-weight="800" font-size="36" fill="#E87722">T</text>
+  <text x="173" y="54" font-family="Montserrat,Arial Black,sans-serif" font-weight="800" font-size="36" fill="white">RADE</text>
+  <text x="62" y="70" font-family="Arial,sans-serif" font-size="10" letter-spacing="2.5" fill="rgba(255,255,255,0.4)">NEVER MISS A JOB AGAIN</text>
+</svg>
+        <p class="footer-tagline">Never Miss a Job Again.<br>AI-powered tools for UK tradespeople.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/book-demo">Book a Demo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/refund">Refund Policy</a></li>
+          <li><a href="/cancellation">Cancellation Policy</a></li>
+          <li><a href="/reactivation">Reactivation Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p class="footer-contact-item">📧 <a href="mailto:hello@ringtrade.co.uk">hello@ringtrade.co.uk</a></p>
+        <p class="footer-contact-item">📞 <a href="tel:+441234000000">+44 1234 000 000</a></p>
+        <div class="footer-badges">
+          <span class="footer-badge">🔒 GDPR Compliant</span>
+          <span class="footer-badge">🇬🇧 UK-Based</span>
+          <span class="footer-badge">ICO Registered</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ringtrade. All rights reserved.</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · Payments by Stripe · GDPR Compliant</span>
+    </div>
+    <p class="footer-disclaimer">All statistics are industry estimates for illustrative purposes.</p>
+  </div>
+</footer>
+<div class="mobile-cta-bar"><a href="/book-demo" class="btn-primary">📅 Book a Free Demo →</a></div>
+<script>
+  const ham=document.getElementById('hamburger');
+  const mob=document.getElementById('mobileMenu');
+  if(ham)ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('open')?'hidden':''});
+  document.querySelectorAll('.reveal').forEach(el=>{new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:0.12}).observe(el)});
+  document.querySelectorAll('.accordion-btn').forEach(btn=>{btn.addEventListener('click',()=>{const body=btn.nextElementSibling;const isOpen=btn.classList.contains('open');document.querySelectorAll('.accordion-btn').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open')});if(!isOpen){btn.classList.add('open');body.classList.add('open')}})});
+</script>
+</body>
+</html>
