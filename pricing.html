@@ -22,8 +22,9 @@
     .section-head{margin-bottom:3.5rem}.section-head h2{margin-bottom:0.75rem}
     .section-head.center{text-align:center}.section-head.center p{margin:0 auto}
     .section-label{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--orange);margin-bottom:0.75rem}
-    .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
-    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal{opacity:1;transform:translateY(0);transition:opacity 0.7s ease,transform 0.7s ease}
+    .reveal.animate{opacity:0;transform:translateY(28px)}
+    .reveal.animate.visible{opacity:1;transform:translateY(0)}
     .reveal-delay-1{transition-delay:0.1s}.reveal-delay-2{transition-delay:0.2s}.reveal-delay-3{transition-delay:0.3s}
     .btn-primary{background:var(--orange);color:#fff;font-family:"Poppins",sans-serif;font-weight:700;font-size:0.88rem;padding:0.65rem 1.5rem;border-radius:6px;border:none;cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:0.4rem;text-decoration:none;white-space:nowrap;min-height:48px}
     .btn-primary:hover{background:var(--orange2);transform:translateY(-1px)}
@@ -83,7 +84,7 @@
     .dfy-strip strong{color:var(--navy);}
 
     /* Pricing cards */
-    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start}
+    .pricing-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:start}
     .plan-card{background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:2.2rem;position:relative;transition:box-shadow 0.2s}
     .plan-card:hover{box-shadow:0 8px 32px rgba(27,58,107,0.1)}
     .plan-card.featured{border:2.5px solid var(--orange);background:linear-gradient(160deg,rgba(232,119,34,0.03) 0%,var(--white) 60%)}
@@ -166,7 +167,7 @@
   <div class="container">
     <span class="section-label" style="color:var(--orange);">Pricing</span>
     <h1 class="reveal" style="color:#fff;">Honest pricing.<br>No hidden fees. No long contracts.</h1>
-    <p class="reveal reveal-delay-1" style="color:rgba(255,255,255,0.75);max-width:560px;margin:1rem auto 0;">Every plan is fully done-for-you. We handle setup, configuration, and ongoing management — you focus on the work. Setup fees are currently waived for founding clients.</p>
+    <p class="reveal reveal-delay-1" style="color:rgba(255,255,255,0.75);max-width:560px;margin:1rem auto 0;">One simple plan. Fully done-for-you. We handle setup, configuration, and ongoing management — you just take the jobs. Setup fee waived for founding clients.</p>
   </div>
 </div>
 
@@ -177,105 +178,54 @@
     <!-- Done-for-you strip -->
     <div class="dfy-strip reveal">
       <span style="font-size:1.5rem;">🛠️</span>
-      <p><strong>Every plan is 100% done-for-you.</strong> We set up everything, configure your AI receptionist, connect your tools, and manage it all ongoing. You don't touch a dashboard unless you want to.</p>
+      <p><strong>One plan. Everything included. 100% done-for-you.</strong> We set up everything, configure your AI receptionist, connect your tools, and manage it all ongoing. You don't touch a dashboard unless you want to.</p>
     </div>
 
     <!-- Legal disclaimer -->
     <div style="background:var(--lgrey);border:1px solid var(--border);border-radius:10px;padding:1.2rem 1.75rem;margin-bottom:2rem;" class="reveal">
       <h4 style="color:var(--navy);font-size:0.92rem;margin-bottom:0.4rem;">📋 Before you subscribe — please read:</h4>
-      <p style="font-size:0.84rem;"><strong>Cancellation:</strong> Cancel anytime with 30 days written notice to <a href="mailto:hello@ringtrade.co.uk" style="color:var(--orange);">hello@ringtrade.co.uk</a>. No minimum contract. &nbsp;<strong>Refunds:</strong> Setup fees non-refundable once work begins. Monthly fees non-refundable for billing months already started. See our <a href="/refund" style="color:var(--orange);">Refund Policy</a>.</p>
+      <p style="font-size:0.84rem;"><strong>Cancellation:</strong> Cancel anytime with 30 days written notice to <a href="/cdn-cgi/l/email-protection#721a171e1e1d32001b1c1506001316175c111d5c0719" style="color:var(--orange);"><span class="__cf_email__" data-cfemail="b2dad7dededdf2c0dbdcd5c6c0d3d6d79cd1dd9cc7d9">[email&#160;protected]</span></a>. No minimum contract. &nbsp;<strong>Refunds:</strong> Setup fees non-refundable once work begins. Monthly fees non-refundable for billing months already started. See our <a href="/refund" style="color:var(--orange);">Refund Policy</a>.</p>
     </div>
 
     <!-- CRM integration note -->
     <div class="crm-note reveal">
       <div class="crm-note-icon">✅</div>
       <div>
-        <h4>Already using Jobber, Tradify, or ServiceM8? No problem — it's included.</h4>
+        <h4>Already using Jobber, Tradify, or ServiceM8? Already included — no extra charge.</h4>
         <p>All plans include connection to your existing job management software at no extra charge. We connect Ringtrade to Jobber (native), Tradify, or ServiceM8 via webhook so leads flow straight into the tools you already use. No double entry. Nothing falls through.</p>
       </div>
     </div>
 
-    <!-- 3 Plan Cards -->
-    <div class="pricing-grid reveal">
-
-      <!-- STARTER -->
-      <div class="plan-card">
-        <div class="plan-name">Starter</div>
-        <div class="plan-tagline">Stop missing calls. Start winning jobs.</div>
-        <div class="plan-price">£197<span>/mo</span></div>
-        <p class="plan-setup">Setup fee: <s>£197</s> → <span style="color:var(--orange);font-weight:700;">FREE for founding clients</span></p>
-        <ul class="plan-features">
-          <li><span class="check">✓</span><strong>Fully set up &amp; managed for you</strong> <span class="dfy-tag">DFY</span></li>
-          <li><span class="check">✓</span>AI call answering — 24/7, 500 mins/month</li>
-          <li><span class="check">✓</span>Missed call SMS text-back (within 60 seconds)</li>
-          <li><span class="check">✓</span>Online booking calendar</li>
-          <li><span class="check">✓</span>Appointment reminders (24hr + 1hr before)</li>
-          <li><span class="check">✓</span>Google review automation</li>
-          <li><span class="check">✓</span>Job pipeline CRM dashboard</li>
-          <li><span class="check">✓</span>Ringtrade mobile app</li>
-          <li><span class="check">✓</span>CRM integration — Jobber, Tradify, ServiceM8</li>
-          <li><span class="check">✓</span>Territory exclusivity</li>
-          <li><span class="check">✓</span>Live within 48 hours</li>
-          <li class="dimmed"><span class="cross">–</span>Quote follow-up automation</li>
-          <li class="dimmed"><span class="cross">–</span>Annual service reminders</li>
-          <li class="dimmed"><span class="cross">–</span>Customer reactivation campaigns</li>
-          <li class="dimmed"><span class="cross">–</span>Monthly marketing campaign</li>
-        </ul>
-        <a href="/book-demo" class="btn-secondary" style="width:100%;justify-content:center;">Get Started — £197/month</a>
-        <div class="stripe-badge">🔒 Payments secured by Stripe</div>
-        <p class="plan-footer-note">By subscribing you agree to our <a href="/terms" style="color:var(--navy);text-decoration:underline;">Terms</a> and <a href="/privacy" style="color:var(--navy);text-decoration:underline;">Privacy Policy</a>.<br>No minimum contract. Cancel with 30 days notice.</p>
-      </div>
-
-      <!-- GROWTH (featured) -->
-      <div class="plan-card featured">
-        <div class="plan-badge orange">Most Popular</div>
-        <div class="plan-name">Growth</div>
-        <div class="plan-tagline">Stop missing calls. Win back the ones you nearly lost.</div>
+    <!-- Single Plan -->
+    <div style="max-width:580px;margin:0 auto;" class="reveal">
+      <div class="plan-card featured" style="border:2.5px solid var(--orange);">
+        <div class="plan-badge orange">✦ Founding Client Offer</div>
+        <div class="plan-name" style="margin-top:0.5rem;">Ringtrade — Done For You</div>
+        <div class="plan-tagline">Never miss a job again. We handle everything — you just take the calls.</div>
         <div class="plan-price">£297<span>/mo</span></div>
-        <p class="plan-setup">Setup fee: <s>£297</s> → <span style="color:var(--orange);font-weight:700;">FREE for founding clients</span></p>
+        <p class="plan-setup">Setup fee: <s>£297</s> → <span style="color:var(--orange);font-weight:700;">FREE — limited founding spots</span></p>
         <ul class="plan-features">
-          <li><span class="check">✓</span><strong>Everything in Starter — fully managed</strong> <span class="dfy-tag">DFY</span></li>
-          <li><span class="check">✓</span>AI call answering — 1,000 mins/month</li>
-          <li><span class="check">✓</span>Quote follow-up automation — we chase unanswered quotes for you</li>
-          <li><span class="check">✓</span>Annual service reminders — re-books customers at 11 months automatically</li>
-          <li><span class="check">✓</span>Customer reactivation campaigns — we win back cold leads</li>
+          <li><span class="check">✓</span><strong>100% done-for-you — we set up &amp; manage everything</strong> <span class="dfy-tag">DFY</span></li>
+          <li><span class="check">✓</span>AI call answering — 24/7, 1,000 mins/month</li>
+          <li><span class="check">✓</span>Missed call SMS text-back within 60 seconds</li>
+          <li><span class="check">✓</span>Online booking calendar — jobs booked straight in</li>
+          <li><span class="check">✓</span>Appointment reminders (24hr + 1hr before)</li>
+          <li><span class="check">✓</span>Google review automation — more 5-stars on autopilot</li>
+          <li><span class="check">✓</span>Quote follow-up automation — we chase unanswered quotes</li>
+          <li><span class="check">✓</span>Annual service reminders — re-books customers at 11 months</li>
+          <li><span class="check">✓</span>Customer reactivation — we win back cold leads</li>
+          <li><span class="check">✓</span>CRM integration — Jobber, Tradify, ServiceM8 included</li>
+          <li><span class="check">✓</span>Job pipeline dashboard + Ringtrade mobile app</li>
           <li><span class="check">✓</span>Monthly performance report — sent to your inbox</li>
-          <li><span class="check">✓</span>Priority support + dedicated account manager</li>
-          <li><span class="check">✓</span>Territory exclusivity</li>
-          <li class="dimmed"><span class="cross">–</span>Done-for-you website</li>
-          <li class="dimmed"><span class="cross">–</span>Booking funnel</li>
-          <li class="dimmed"><span class="cross">–</span>Monthly marketing campaign</li>
-          <li class="dimmed"><span class="cross">–</span>Unlimited call minutes</li>
+          <li><span class="check">✓</span>Dedicated account manager + WhatsApp support</li>
+          <li><span class="check">✓</span>Territory exclusivity — your area, locked to you</li>
+          <li><span class="check">✓</span>Live within 48 hours</li>
         </ul>
-        <a href="/book-demo" class="btn-primary" style="width:100%;justify-content:center;">Get Started — £297/month</a>
-        <div class="stripe-badge">🔒 Payments secured by Stripe</div>
-        <p class="plan-footer-note">By subscribing you agree to our <a href="/terms" style="color:var(--navy);text-decoration:underline;">Terms</a> and <a href="/privacy" style="color:var(--navy);text-decoration:underline;">Privacy Policy</a>.<br>No minimum contract. Cancel with 30 days notice.</p>
+        <a href="/book-demo" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:0.9rem;">Get Started — £297/month →</a>
+        <div class="stripe-badge" style="justify-content:center;">🔒 Payments secured by Stripe · No minimum contract</div>
+        <p class="plan-footer-note">By subscribing you agree to our <a href="/terms" style="color:var(--navy);text-decoration:underline;">Terms</a> and <a href="/privacy" style="color:var(--navy);text-decoration:underline;">Privacy Policy</a>. Cancel with 30 days notice.</p>
       </div>
-
-      <!-- PRO -->
-      <div class="plan-card pro-card">
-        <div class="plan-badge navy">🚀 Full Growth Machine</div>
-        <div class="plan-name">Pro</div>
-        <div class="plan-tagline">Your own marketing department. For £497/mo.</div>
-        <div class="plan-price">£497<span>/mo</span></div>
-        <p class="plan-setup">Setup fee: <s>£497</s> → <span style="color:var(--orange);font-weight:700;">FREE for founding clients</span></p>
-        <ul class="plan-features">
-          <li><span class="check">✓</span><strong>Everything in Growth — fully managed</strong> <span class="dfy-tag">DFY</span></li>
-          <li><span class="check">✓</span>Unlimited AI call answering minutes</li>
-          <li><span class="check">✓</span><strong>Done-for-you website</strong> — professional booking site, live within 7 days</li>
-          <li><span class="check">✓</span><strong>Booking funnel</strong> — high-converting landing page that turns visitors into booked jobs</li>
-          <li><span class="check">✓</span>Custom AI voice &amp; script — branded to your business name</li>
-          <li><span class="check">✓</span>Monthly SMS &amp; email marketing campaign — we write and send it</li>
-          <li><span class="check">✓</span>Advanced analytics dashboard</li>
-          <li><span class="check">✓</span>VIP support — direct WhatsApp line to your account manager</li>
-          <li><span class="check">✓</span>Territory exclusivity</li>
-        </ul>
-        <a href="/book-demo" class="btn-primary" style="width:100%;justify-content:center;background:var(--navy);">Get Started — £497/month</a>
-        <div class="stripe-badge">🔒 Payments secured by Stripe</div>
-        <p class="plan-footer-note">By subscribing you agree to our <a href="/terms" style="color:var(--navy);text-decoration:underline;">Terms</a> and <a href="/privacy" style="color:var(--navy);text-decoration:underline;">Privacy Policy</a>.<br>No minimum contract. Cancel with 30 days notice.</p>
-      </div>
-
-    </div><!-- /pricing-grid -->
+    </div>
   </div>
 </section>
 
@@ -364,13 +314,9 @@
           <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--mgrey);margin-top:0.3rem;"><span>£50</span><span>£1,000</span></div>
         </div>
 
-        <div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.6rem;">
-            <label style="font-weight:600;font-size:0.9rem;color:var(--navy);">Ringtrade plan</label>
-            <span id="planVal" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:1.2rem;color:var(--orange);">£197/mo</span>
-          </div>
-          <input type="range" id="planSlider" min="0" max="2" value="0" step="1" style="width:100%;accent-color:var(--navy);height:6px;cursor:pointer;">
-          <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--mgrey);margin-top:0.3rem;"><span>Starter</span><span style="text-align:center;flex:1;">Growth</span><span>Pro</span></div>
+        <div style="background:var(--lorange);border:1px solid rgba(232,119,34,0.3);border-radius:8px;padding:0.75rem 1rem;display:flex;align-items:center;gap:0.6rem;">
+          <span style="font-size:1.2rem;">📌</span>
+          <p style="font-size:0.85rem;margin:0;color:var(--dgrey);">Based on <strong>Ringtrade at £297/mo</strong> — your only plan, fully done-for-you.</p>
         </div>
 
       </div>
@@ -412,14 +358,14 @@
   </div>
 </section>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   (function(){
-    var plans=[{name:"Starter",price:197},{name:"Growth",price:297},{name:"Pro",price:497}];
+    var plans=[{name:"Ringtrade",price:297}];
     function fmt(n){return"£"+Math.round(n).toLocaleString("en-GB");}
     function calc(){
       var calls=parseInt(document.getElementById("callsSlider").value);
       var job=parseInt(document.getElementById("jobSlider").value);
-      var pi=parseInt(document.getElementById("planSlider").value);
+      var pi=0;
       var plan=plans[pi];
       var annualCalls=calls*52;
       var lost=annualCalls*job;
@@ -429,7 +375,7 @@
       var roi=((net/cost)*100);
       document.getElementById("callsVal").textContent=calls;
       document.getElementById("jobVal").textContent=fmt(job);
-      document.getElementById("planVal").textContent=fmt(plan.price)+"/mo";
+  
       document.getElementById("res-calls").textContent=annualCalls.toLocaleString("en-GB");
       document.getElementById("res-lost").textContent=fmt(lost);
       document.getElementById("res-cost").textContent=fmt(cost);
@@ -437,7 +383,7 @@
       document.getElementById("res-net").textContent=fmt(net);
       document.getElementById("res-roi").textContent="Return on investment: "+Math.round(roi).toLocaleString("en-GB")+"%";
     }
-    ["callsSlider","jobSlider","planSlider"].forEach(function(id){
+    ["callsSlider","jobSlider"].forEach(function(id){
       document.getElementById(id).addEventListener("input",calc);
     });
     calc();
@@ -456,7 +402,7 @@
       <div class="accordion-item"><button class="accordion-btn">What's included in the Pro website build? <span class="accordion-arrow">▾</span></button><div class="accordion-body"><p>We build you a professional multi-page trade website — homepage, services page, about page, contact/booking page, and a Google reviews section. It's built to convert visitors into enquiries, not just look pretty. Goes live within 7 days of onboarding. You own it and we host it as part of your Pro subscription.</p></div></div>
       <div class="accordion-item"><button class="accordion-btn">Is it GDPR compliant? <span class="accordion-arrow">▾</span></button><div class="accordion-body"><p>Yes. Ringtrade is ICO registered and fully UK GDPR compliant. A Data Processing Agreement is provided with every subscription. All customer data is processed through GDPR-certified platforms. See our <a href="/privacy" style="color:var(--orange);">Privacy Policy</a>.</p></div></div>
       <div class="accordion-item"><button class="accordion-btn">How long does setup take? <span class="accordion-arrow">▾</span></button><div class="accordion-body"><p>We aim for 48–72 hours from payment to your go-live call. You fill in a short onboarding form, we handle all the technical setup, then we do a 15-minute go-live call together to make sure everything is working perfectly.</p></div></div>
-      <div class="accordion-item"><button class="accordion-btn">Can I cancel anytime? <span class="accordion-arrow">▾</span></button><div class="accordion-body"><p>Yes. Send an email to <a href="mailto:hello@ringtrade.co.uk" style="color:var(--orange);">hello@ringtrade.co.uk</a> with subject "Cancellation Request". 30 days notice required. Service continues through the notice period. See our <a href="/cancellation" style="color:var(--orange);">Cancellation Policy</a>.</p></div></div>
+      <div class="accordion-item"><button class="accordion-btn">Can I cancel anytime? <span class="accordion-arrow">▾</span></button><div class="accordion-body"><p>Yes. Send an email to <a href="/cdn-cgi/l/email-protection#2c44494040436c5e45424b585e4d4849024f43025947" style="color:var(--orange);"><span class="__cf_email__" data-cfemail="9ef6fbf2f2f1deecf7f0f9eaecfffafbb0fdf1b0ebf5">[email&#160;protected]</span></a> with subject "Cancellation Request". 30 days notice required. Service continues through the notice period. See our <a href="/cancellation" style="color:var(--orange);">Cancellation Policy</a>.</p></div></div>
       <div class="accordion-item"><button class="accordion-btn">What is territory exclusivity? <span class="accordion-arrow">▾</span></button><div class="accordion-body"><p>When you sign up, we lock your geographic area exclusively to you. We will not sign another trade business in your area for as long as you remain a Ringtrade client. Territory releases 30 days after cancellation.</p></div></div>
     </div>
   </div>
@@ -509,7 +455,7 @@
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <p class="footer-contact-item">📧 <a href="mailto:hello@ringtrade.co.uk" style="color:var(--orange);">hello@ringtrade.co.uk</a></p>
+        <p class="footer-contact-item">📧 <a href="/cdn-cgi/l/email-protection#026a676e6e6d42706b6c6576706366672c616d2c7769" style="color:var(--orange);"><span class="__cf_email__" data-cfemail="751d1019191a35071c1b1201071411105b161a5b001e">[email&#160;protected]</span></a></p>
         <p class="footer-contact-item">📞 <a href="tel:+441234000000">+44 1234 000 000</a></p>
         <div class="footer-badges">
           <span class="footer-badge">🔒 GDPR Compliant</span>
@@ -527,12 +473,7 @@
 </footer>
 <div class="mobile-cta-bar"><a href="/book-demo" class="btn-primary">📅 Book a Free Demo →</a></div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const ham=document.getElementById('hamburger');
   const mob=document.getElementById('mobileMenu');
-  if(ham)ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('open')?'hidden':''});
-  document.querySelectorAll('.reveal').forEach(el=>{new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:0.12}).observe(el)});
-  document.querySelectorAll('.accordion-btn').forEach(btn=>{btn.addEventListener('click',()=>{const body=btn.nextElementSibling;const isOpen=btn.classList.contains('open');document.querySelectorAll('.accordion-btn.open').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open')});if(!isOpen){btn.classList.add('open');body.classList.add('open')}})});
-</script>
-</body>
-</html>
+  if(ham)ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');document.body.style.overflow=mob.classList.con
